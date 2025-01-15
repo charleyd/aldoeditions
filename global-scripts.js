@@ -1,0 +1,14 @@
+// Lenis
+const lenis = new Lenis({
+  // Plus la valeur est faible, plus le scroll sera fluide
+  lerp: 0.4,
+  // Valeur par défaut : 1
+  // Plus la valeur est haute, plus le défilement sera rapide 
+  wheelMultiplier: 0.9,
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
